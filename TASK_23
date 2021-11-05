@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> ints = new LinkedList<>();
+        ints.add(3);
+        ints.add(2);
+        ints.addLast(1);
+        ints.addFirst(4);
+        ints.add(0, 5);
+        ints.add(5, 0);
+        for (int i = 0; i < ints.size(); i++) {
+            System.out.print(ints.get(i) + ", ");
+        }
+        System.out.printf("В списке %d элементов \n", ints.size());
+        System.out.println("Первый элемент: "+ ints.getFirst());
+        System.out.println("Пследний элемент: "+ ints.getLast());
+        ints.set(1, 99);
+        for(Integer state : ints){
+
+            System.out.println(state);
+        }
+        if(ints.contains(99)){
+            System.out.println("Список содержит число 99");
+        } else {
+            System.out.println("Такого числа в списке нет");
+        }
+
+        ints.remove(3);
+        ints.removeFirst();
+        ints.removeLast();
+        for (int i = 0; i < ints.size(); i++) {
+            System.out.print(ints.get(i) + ", ");
+        }
+
+    }
+}
